@@ -20,7 +20,7 @@ class Login extends Component {
       if (!err) {
         alert(`发登录的ajax请求, username=${username}, password=${password}`)
       } else {
-        alert('验证失败')
+        // alert('验证失败')
       }
     });
   };
