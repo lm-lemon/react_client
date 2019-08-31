@@ -7,18 +7,5 @@ import ajax from './ajax'
 // const BASE = 'http://locahost:5000'
 const BASE = ''
 
-// 登陆
-export function reqLogin(username, password) {
-  ajax({
-    method: 'post',
-    url: BASE + '/login',
-    data: {
-      username,
-      password
-    }
-  })
-}
-
-const name = 'admin'
-const pwd = 'admin'
-reqLogin(name, pwd)
+// 请求登陆
+export const reqLogin = (username, password) =>  ajax.post(BASE + '/login', {username, password})
