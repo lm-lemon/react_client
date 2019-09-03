@@ -45,7 +45,7 @@ export default class Admin extends Component {
               <Redirect to="/home" />
             </Switch>
           </Content>
-          <Footer style={{ background: 'red' }}>Footer</Footer>
+          <Footer style={{ background: '#fff' }}>Footer</Footer>
         </Layout>
       </Layout>
     )
