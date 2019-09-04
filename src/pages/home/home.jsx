@@ -5,7 +5,7 @@ export default class Home extends Component {
     render() {
         return (
             <div className="Home">
-                home
+                欢迎登陆德胜后台系统
             </div>
         )
     }

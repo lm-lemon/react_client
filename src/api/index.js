@@ -26,8 +26,27 @@ export const reqWeather = (city) => {
       } else { // 失败的
         message.error('获取天气信息失败')
       }
-
     })
   })
 
 }
+
+// 获取分类列表
+// export const reqCategorys = () => ajax.get(BASE + '/manage/category/list')
+/* export const reqCategorys = () => ajax({
+  // method: 'GET',
+  url: BASE + '/manage/category/list'
+}) */
+export const reqCategorys = () => ajax(BASE + '/manage/category/list')
+
+
+// 添加分类
+export const reqAddCategory = (categoryName) => ajax.post(BASE + '/manage/category/add', {
+  categoryName
+})
+
+// 修改分类
+export const reqUpdateCategory = ({categoryId, categoryName}) => ajax.post(BASE + '/manage/category/update', {
+  categoryId,
+  categoryName
+})
