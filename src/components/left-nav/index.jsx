@@ -14,7 +14,6 @@ const { SubMenu } = Menu
 */
 class LeftNav extends Component {
 
-
   /* 
   判断当前用户是否有此item对应的权限
   */

@@ -96,3 +96,22 @@ export const reqUpdateStatus = (productId, status) => ajax(BASE + '/manage/produ
     status
   }
 })
+
+/* 删除图片 */
+export const reqDeleteImg = (name) => ajax.post(BASE + '/manage/img/delete', { name })
+
+/* 添加/修改商品 */
+export const reqAddUpdateProduct = (product) => ajax.post(
+  BASE + '/manage/product/' + (product._id ? 'update' : 'add'),
+  product
+)
+
+// 获取所有角色的列表
+export const reqRoles = () => ajax(BASE + '/manage/role/list')
+// 添加角色
+export const reqAddRole = (roleName) => ajax.post(BASE + '/manage/role/add', {
+  roleName
+})
+// 更新角色
+export const reqUpdateRole = (role) => ajax.post(BASE + '/manage/role/update', role)
+

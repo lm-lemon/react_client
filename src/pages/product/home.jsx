@@ -29,6 +29,7 @@ export default class ProductHome extends Component {
     searchName: '', // 搜索的关键字
   }
 
+  //throttle函数防抖
   updateStatus = throttle(async (productId, status) => {
     // 计算更新后的值
     status = status === 1 ? 2 : 1
